@@ -1,4 +1,4 @@
-let api = "https://moonlgh-bug-free-fiesta-46g4g6rp9xxc7vpq-8080.preview.app.github.dev/"
+let api = "https://efest-api.vercel.app/"
 
 function getNav() {
     let navbar = document.getElementById("navbar-cta");
