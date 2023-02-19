@@ -1,4 +1,4 @@
-let api = "https://absen.rplsaci.tech/"
+let api = "https://moonlgh-bug-free-fiesta-46g4g6rp9xxc7vpq-8080.preview.app.github.dev/"
 
 function getNav() {
     let navbar = document.getElementById("navbar-cta");
@@ -21,7 +21,7 @@ async function log() {
         localStorage.setItem("token", token)
         alert("Authorized, please click on continue")
         document.querySelector("#main").innerHTML += `
-        <a href="./manageAbsen.html" class="btn btn-wide">Continue</a>
+        <a href="./manageDaftar.html" class="btn btn-wide">Continue</a>
         `
     } else {
         console.log("not correct")
@@ -53,8 +53,7 @@ async function loadData() {
         <tr class="bg-white">
             <td class="px-4 py-2">${json[i].nama}</td>
             <td class="px-4 py-2">${json[i].kelas}${json[i].kelasStr.toUpperCase().replace("X","").replace("-","").replace(" ","")}</td>
-            <td class="px-4 py-2">${json[i].status}</td>
-            <td class="px-4 py-2">${json[i].alasan}</td>
+            <td class="px-4 py-2">${json[i].jenis}</td>
             <td class="px-4 py-2">${(new Date(json[i].time)).toLocaleString()}</td>
             <td class="px-4 py-2">
             <button onclick="deleteId(this)" class="btn btn-primary" data-id="${json[i]._id}">Delete</button>

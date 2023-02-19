@@ -1,32 +1,43 @@
-let api = "https://absen.rplsaci.tech/"
+let api = "https://moonlgh-bug-free-fiesta-46g4g6rp9xxc7vpq-8080.preview.app.github.dev/"
 
 function getNav() {
     let navbar = document.getElementById("navbar-cta");
     navbar.classList.toggle("hidden");
 }
 
+let finished = false
 let clicked = false
-async function absen() {
+async function daftar() {
     if (!clicked) {
         clicked = true
 
         let namaAbsen = document.getElementById("namaAbsen").value
         let kelas = document.getElementById("kelas").value
-        let status = document.getElementById("status").value
-        let alasan = document.getElementById("alasan").value || "-"
+        let jenis = document.getElementById("jenis").value
+        if(jenis.includes("jenis")){
+            alert("Please select a type")
+            return
+        }
         let kelasStr = document.getElementById("kelasStr").value
         let res = await fetch(api + "api/absen", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ nama: namaAbsen, kelas: kelas, status: status, alasan: alasan, kelasStr: kelasStr }),
+            body: JSON.stringify({ nama: namaAbsen, kelas: kelas, jenis, kelasStr: kelasStr }),
         });
         let data = await res.json()
         if (data.status === 401) {
             alert(data.message)
+            clicked = false
         } else {
             alert(data.message)
+            clicked = false
+            finished = true
         }
     } else {
-        alert("Sabar mas")
+        if(finished){
+            alert("Request finished, please refresh the page")
+        } else {
+            alert("Please wait for the previous request to finish")
+        }
     }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-slate-800 bg-cover" style="background-image: url('./assets/img/background.png');">
+<html lang="en" class="bg-slate-800 bg-cover">
 
 <head>
     <meta charset="UTF-8">
@@ -7,16 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/main.css">
     <script src="./assets/js/index.js" defer></script>
-    <title>Ekstrakulikuler RPL SMAN 1 CIKAMPEK</title>
-    <link rel="shortcut icon" href="./assets/img/logo.png" type="image/x-icon">
+    <title>English Club SMAN 1 CIKAMPEK</title>
 </head>
 
 <body>
     <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
         <div class="container flex flex-wrap justify-between items-center mx-auto">
-            <a href="https://rplsaci.github.io/" class="flex items-center">
-                <img src="./assets/img/logo.png" class="mr-3 h-6 sm:h-9 rounded-full" alt="RplSaci Logo">
-                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">RPLCi</span>
+            <a href="https://EcSaci.github.io/" class="flex items-center">
+                <img src="./assets/img/logo.png" class="mr-3 h-6 sm:h-9 rounded-full" alt="EcSaci Logo">
+                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">English Club</span>
             </a>
             <div class="flex md:order-2">
                 <a href="./login.html" type="button"
@@ -37,17 +36,8 @@
                 <ul
                     class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                     <li>
-                        <a href="https://rplsaci.github.io/"
-                            class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Home</a>
-                    </li>
-                    <li>
-                        <a href="https://rplsaci.github.io/About/"
-                            class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                            aria-current="page">About</a>
-                    </li>
-                    <li>
-                        <a href="https://rplsaci.github.io/Absensi-RPL/"
-                            class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white">Absensi</a>
+                        <a href="https://EcSaci.github.io/Efest-Daftar/"
+                            class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white">EFEST</a>
                     </li>
                 </ul>
             </div>
@@ -62,34 +52,32 @@
                     <select id="kelas">
                         <option>X</option>
                         <option>XI</option>
-                        <option>XII</option>
                     </select>
                     <input type="text" id="kelasStr" placeholder="Kelas" class="input input-bordered input-lg" />
                 </label>
             </div>
-            <select id="status" class="select mt-4 select-primary w-full max-w-xs">
-                <option>Masuk</option>
-                <option>Izin</option>
-                <option>Sakit</option>
-            </select>
-            <input id="alasan" type="text" placeholder="Alasan (Jika Ada)"
-                class="input mt-4 input-bordered input-md w-full max-w-xs" />
-            <br>
-            <button onclick="absen()" class="btn btn-wide">Absen</button>
+            <div class="form-control absensi mt-4">
+                <select id="jenis" class="select select-info w-full max-w-xs">
+                    <option disabled selected>Jenis Lomba</option>
+                    <option>Speech</option>
+                    <option>Singing</option>
+                    <option>Poetry</option>
+                    <option>Story Telling</option>
+                    <option>News Anchor</option>
+                  </select>
+            </div>
+            <button onclick="daftar()" class="btn btn-wide">Daftar</button>
         </div>
     </div>
     <footer class="inset-x-0 bottom-0 p-2 bg-white sm:p-6 dark:bg-gray-900">
         <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
-                <a href="https://rplsaci.github.io/" class="flex items-center">
-                    <img src="./assets/img/logo.png" class="mr-3 h-6 sm:h-9 rounded-full" alt="RplSaci Logo">
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">RPLCi</span>
+                <a href="https://EcSaci.github.io/" class="flex items-center">
+                    <img src="./assets/img/logo.png" class="mr-3 h-6 sm:h-9 rounded-full" alt="EcSaci Logo">
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">English Club</span>
                 </a>
                 <br>
-                <span>this website may not be the latest version, click <a href="https://rplsaci.github.io/"
-                        class="text-blue-600">ME</a> to open the latest version</span>
-                <br>
-                <span>Want to contribute ? click <a href="https://github.com/rplsaci/rplsaci.github.io/"
+                <span>Want to contribute ? click <a href="https://github.com/EcSaci/Daftar-Efest/"
                         class="text-blue-600">ME</a> to view the source code</span>
             </div>
             <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
@@ -97,7 +85,10 @@
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
                     <ul class="text-gray-600 dark:text-gray-400">
                         <li class="mb-4">
-                            <a href="https://instagram.com/robotiksachie" class="hover:underline ">Instagram</a>
+                            <a href="https://instagram.com/englishclub_saci" class="hover:underline ">Instagram</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="https://github.com/EcSaci" class="hover:underline ">Github</a>
                         </li>
                     </ul>
                 </div>
@@ -106,11 +97,11 @@
         <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8">
         <div class="sm:flex sm:items-center sm:justify-between">
             <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400" id="FooterYear">© xxxx <a
-                    href="https://RplSaci.github.io/" class="hover:underline">RplSaci</a>. All Rights Reserved.
+                    href="https://EcSaci.github.io/" class="hover:underline">EcSaci</a>. All Rights Reserved.
             </span>
             <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-                <a>With ❤️ RPLSaci (60)</a>
-                <a href="https://instagram.com/robotiksachie"
+                <a>With ❤️ EcSaci</a>
+                <a href="https://instagram.com/englishclub_saci"
                     class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path fill-rule="evenodd"
