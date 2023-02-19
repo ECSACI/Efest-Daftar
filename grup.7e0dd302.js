@@ -1,2 +1,0 @@
-let api="https://efest-api.vercel.app/";async function log(){let e=localStorage.getItem("daftar");console.log(e);let t=await fetch(api+"api/grup",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({grup:e.toLowerCase()})}),o=await t.json();document.getElementById("name").innerText=e,document.getElementById("url").innerText=o.message,document.getElementById("url").setAttribute("href",o.message),console.log(o)}function ulang(){localStorage.removeItem("daftar"),document.location.href="../index.html"}log();
-//# sourceMappingURL=grup.7e0dd302.js.map
