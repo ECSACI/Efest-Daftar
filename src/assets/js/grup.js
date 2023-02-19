@@ -23,5 +23,5 @@ async function log() {
 
 function ulang(){
     localStorage.removeItem("daftar")
-    document.location.href = "../index.html"
+    document.location.href = "../Efest-Daftar"
 }
