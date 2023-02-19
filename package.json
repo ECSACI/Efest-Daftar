@@ -3,7 +3,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html",
+    "build": "parcel build --public-url /Efest-Daftar/ src/*.html",
     "buildToSch": "parcel build --public-url /Absensi-RPL/ src/*.html",
     "buildNotRoot": "parcel build --public-url 'templateTailwind' src/*.html"
   },
