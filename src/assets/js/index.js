@@ -5,19 +5,18 @@ function getNav() {
     navbar.classList.toggle("hidden");
 }
 
-let finished = false
 let clicked = false
 async function daftar() {
     if (!clicked) {
-        clicked = true
 
         let namaAbsen = document.getElementById("namaAbsen").value
         let kelas = document.getElementById("kelas").value
         let jenis = document.getElementById("jenis").value
-        if(jenis.includes("jenis")){
+        if(jenis.includes("Jenis")){
             alert("Please select a type")
             return
         }
+        clicked = true
         let kelasStr = document.getElementById("kelasStr").value
         let res = await fetch(api + "api/absen", {
             method: "POST",
@@ -31,13 +30,16 @@ async function daftar() {
         } else {
             alert(data.message)
             clicked = false
-            finished = true
+            localStorage.setItem("daftar",jenis)
+            alert("Mengarahkan mu ke page grup")
+            document.location.href = "./grup.html"
         }
     } else {
-        if(finished){
-            alert("Request finished, please refresh the page")
-        } else {
-            alert("Please wait for the previous request to finish")
-        }
+        alert("Please wait for the previous request to finish")
     }
+}
+
+if(localStorage.getItem("daftar")){
+    document.getElementById("done").innerHTML += `<a href="./grup.html" class="btn btn-wide">Telah Daftar ? Masuk Grup disini</a>`
+    document.getElementById("done").classList.remove("hidden")
 }

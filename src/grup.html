@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/main.css">
-    <script src="./assets/js/index.js" defer></script>
+    <script src="./assets/js/grup.js" defer></script>
     <title>English Club SMAN 1 CIKAMPEK</title>
     <link rel="shortcut icon" href="./assets/img/logo.jpg" type="image/x-icon">
 </head>
@@ -45,32 +45,17 @@
         </div>
     </nav>
     <div class="content flex items-center justify-center" style="height: 80vh;">
-        <div class="mx-auto text-center">
-            <input id="namaAbsen" type="text" placeholder="Nama"
-                class="mt-4 input input-bordered input-md w-full max-w-xs" />
-            <div class="form-control absensi mt-4">
-                <label class="input-group input-group-md place-content-center">
-                    <select id="kelas">
-                        <option>X</option>
-                        <option>XI</option>
-                    </select>
-                    <input type="text" id="kelasStr" placeholder="Kelas" class="input input-bordered input-lg" />
-                </label>
+        <div class="card w-96 bg-neutral text-neutral-content">
+            <div class="card-body items-center text-center">
+              <h2 class="card-title" id="name">Loading..</h2>
+              <a id="url">Getting your group</a>
+              <br>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary" onclick="ulang()">Salah Grup (ulang pendaftaran)</button>
+              </div>
+              <p>salah grup berarti kamu harus mendaftar ulang, klik tombol di atas lalu konfirmasi ke contact person</p>
             </div>
-            <div class="form-control absensi mt-4">
-                <select id="jenis" class="select select-info w-full max-w-xs">
-                    <option disabled selected>Jenis Lomba</option>
-                    <option>Speech</option>
-                    <option>Singing</option>
-                    <option>Poetry</option>
-                    <option>Story Telling</option>
-                    <option>News Anchor</option>
-                  </select>
-            </div>
-            <button onclick="daftar()" class="btn btn-wide">Daftar</button>
-            <br>
-            <a id="done" class="btn btn-wide hidden"></a>
-        </div>
+          </div>
     </div>
     <footer class="inset-x-0 bottom-0 p-2 bg-white sm:p-6 dark:bg-gray-900">
         <div class="md:flex md:justify-between">
